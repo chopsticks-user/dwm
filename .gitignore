@@ -1,0 +1,6 @@
+.idea
+
+*.orig
+*.rej
+*.o
+dwm

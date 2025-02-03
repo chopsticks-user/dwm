@@ -60,6 +60,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", sel_bg, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+#include "/usr/include/X11/XF86keysym.h"
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -96,6 +98,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
     { 0,             XK_Print,      spawn,           SHCMD("flameshot gui") },
+    { 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("amixer -q sset Master 5+") },
+    { 0, XF86XK_AudioLowerVolume, spawn, SHCMD("amixer -q sset Master 5-") },
+    { 0, XF86XK_AudioMute, spawn, SHCMD("amixer sset Master toggle") },
 };
 
 /* button definitions */

@@ -15,7 +15,8 @@ static const char *fonts[]          = { "FiraCode Nerd Font:size=14" };
 static const char dmenufont[]       = "FiraCode Nerd Font:size=14";
 
 /* color theme */
-#include "/home/frost/.suckless/themes/tokyo_night.dwm.h"
+// #include "/home/frost/.suckless/themes/tokyo_night.dwm.h"
+#include "/home/frost/.cache/wal/colors-wal-dwm.h"
 
 /* tagging */
 static const char *tags[] = { "⌨₁", " ₂", " ₃", "₄", " ₅", " ₆", " ₇", "₈", " ₉"};
